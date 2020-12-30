@@ -47,17 +47,17 @@
                   </div> -->
                 </li>
                 <li class="nav-item mr-2">
-                  <a class="nav-link" href="#" >Contact</a>
+                  <a class="nav-link" href="{% url 'courses:contact_us' %}">Contact</a>
                 </li>
                 <li class="nav-item mr-2">
                     <a class="nav-link" href="{% url 'courses:about' %}">About us</a>
                   </li>
-                <li class="nav-item mr-2">
+                <!-- <li class="nav-item mr-2">
                 <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item mr-2">
                     <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>    
@@ -71,10 +71,10 @@
         
 <!-- footer -->
 
-<footer class="footer-credit">
+<footer class="footer-credit pb-5">
   <div class="container d-flex  flex-wrap justify-content-between" >
     
-    <div class="quick-links mt-4">
+    <div class="quick-links mt-4 ">
       <h3 class="footer-heading">Quick Links</h3>
       <div class="links flex-column d-flex mt-3">
         <a href="{% url 'courses:home' %}" class="footer-links">Home</a>
