@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'django.contrib.humanize',
     'ckeditor',
-    'crispy_forms',
+    # 'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'casots.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(os.path.join( BASE_DIR / 'db.sqlite3')),
     }
 }
 
@@ -134,5 +134,5 @@ EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT =587
 EMAIL_USE_TLS =True
-EMAIL_HOST_USER = 'umohu67@gmail.com'
-EMAIL_HOST_PASSWORD = 'VICTORIA10'
+EMAIL_HOST_USER = '****************'
+EMAIL_HOST_PASSWORD = '******'
