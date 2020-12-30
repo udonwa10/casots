@@ -25,7 +25,7 @@ SECRET_KEY = '20tbcztd#^-=w)!2#4zdqyl9k00y0so8habrplxt)p9pg98-$o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['casots.azurewebsites.net']
 
 
 # Application definition
