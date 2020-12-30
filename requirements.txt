@@ -43,10 +43,10 @@ pycparser==2.20
 pygame==1.9.6
 PyJWT==1.7.1
 pylint==2.3.1
-pypiwin32==223
+# pypiwin32==223
 pyttsx3==2.90
 pytz==2020.1
-pywin32==228
+# pywin32==228
 requests==2.23.0
 rfc3986==1.4.0
 six==1.12.0
