@@ -283,15 +283,15 @@ def quiz_instructions(request, category):
     }
     return render(request,'quizTest/quiz_details.html', context)
 
-# def Leadership_board(request, quiz):
-#     quizName = str(quiz)
+def Leadership_board(request, quiz):
+    quizName = str(quiz)
     
-#     course_name = Courses.objects.filter(name=quizName).first()
+    course_name = Courses.objects.filter(name=quizName).first()
     
     
-#     course_category = course_name.category.name
-#     related_quiz = Quiz.objects.filter(course__category__name=course_category).all()
-#     listit=list(related)
+    course_category = course_name.category.name
+    related_quiz = Quiz.objects.filter(course__category__name=course_category).all()
+    listit=list(related)
 
 def quiz_performance(request):
     if request.method == 'POST':
