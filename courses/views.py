@@ -83,21 +83,21 @@ def register(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return redirect('/login')
+            return redirect('/courses')
 
     context = {'form': form}
     return render(request, 'courses/registration/sign_up.html', context=context)
 
 # login page
-def login_view(request):
-    form =UserLoginForm(request.POST or None)
-    if form.is_valid():
-        username = form.cleaned_data.get("username")
-        password = form.cleaned_data.get("password")
-        user = authenticate(username=username, password=password)
-        login(request, user)
-        return redirect('/dashboard')
-    return render(request, 'courses/registration/sign_up.html', {"form": form})
+# def login_view(request):
+#     form =UserLoginForm(request.POST or None)
+#     if form.is_valid():
+#         username = form.cleaned_data.get("username")
+#         password = form.cleaned_data.get("password")
+#         user = authenticate(username=username, password=password)
+#         login(request, user)
+#         return redirect('/dashboard')
+#     return render(request, 'courses/registration/sign_in.html', {"form": form})
 
 # QUIZ SECTION
 # login page if user tries to access quiz without login
@@ -110,7 +110,7 @@ def login_quiz(request, quiz):
         user = authenticate(username=username, password=password)
         login(request, user)
         return HttpResponseRedirect(reverse('courses:course_summary', args=[quiz]))
-    return render(request, 'courses/registration/sign_up.html', {"form": form})
+    return render(request, 'courses/registration/sign_in.html', {"form": form})
 
 def index(request, quiz):
 

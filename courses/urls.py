@@ -12,7 +12,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('registration/',views.register, name='registration'),
-    path('login/', views.login_view, name='login'),
+#     path('login/', views.login_view, name='login'),
     
     #new
     path('loginquiz/<slug:quiz>/', views.login_quiz, name='login_quiz'),
