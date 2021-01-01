@@ -434,3 +434,4 @@ def leadership_board(request, quiz):
 
     return render(request, 'quizTest/ranked_performance.html', {'user_performances': ranked_performance, 'related_quizzes': related_quizzes})    
 
+# i am almost done
