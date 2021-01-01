@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '20tbcztd#^-=w)!2#4zdqyl9k00y0so8habrplxt)p9pg98-$o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['casots.azurewebsites.net', '127.0.0.1']
 
