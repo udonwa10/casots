@@ -6,7 +6,7 @@ from django.utils.translation import gettext as _
 User=get_user_model()
 
 class UserLoginForm(forms.Form):
-    username = forms.CharField(widget=forms.PasswordInput)
+    username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
     
     def clean(self, *args, **kwargs):

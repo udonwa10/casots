@@ -89,15 +89,15 @@ def register(request):
     return render(request, 'courses/registration/sign_up.html', context=context)
 
 # login page
-# def login_view(request):
-#     form =UserLoginForm(request.POST or None)
-#     if form.is_valid():
-#         username = form.cleaned_data.get("username")
-#         password = form.cleaned_data.get("password")
-#         user = authenticate(username=username, password=password)
-#         login(request, user)
-#         return redirect('/dashboard')
-#     return render(request, 'courses/registration/sign_in.html', {"form": form})
+def login_view(request):
+    form =UserLoginForm(request.POST or None)
+    if form.is_valid():
+        username = form.cleaned_data.get("username")
+        password = form.cleaned_data.get("password")
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        return redirect('/dashboard')
+    return render(request, 'courses/registration/sign_in.html', {"form": form})
 
 # QUIZ SECTION
 # login page if user tries to access quiz without login
@@ -110,7 +110,7 @@ def login_quiz(request, quiz):
         user = authenticate(username=username, password=password)
         login(request, user)
         return HttpResponseRedirect(reverse('courses:course_summary', args=[quiz]))
-    return render(request, 'courses/registration/sign_in.html', {"form": form})
+    return render(request, 'courses/registration/sign_up.html', {"form": form})
 
 def index(request, quiz):
 
@@ -283,15 +283,15 @@ def quiz_instructions(request, category):
     }
     return render(request,'quizTest/quiz_details.html', context)
 
-def Leadership_board(request, quiz):
-    quizName = str(quiz)
+# def Leadership_board(request, quiz):
+#     quizName = str(quiz)
     
-    course_name = Courses.objects.filter(name=quizName).first()
+#     course_name = Courses.objects.filter(name=quizName).first()
     
     
-    course_category = course_name.category.name
-    related_quiz = Quiz.objects.filter(course__category__name=course_category).all()
-    listit=list(related)
+#     course_category = course_name.category.name
+#     related_quiz = Quiz.objects.filter(course__category__name=course_category).all()
+#     listit=list(related)
 
 def quiz_performance(request):
     if request.method == 'POST':
@@ -434,4 +434,3 @@ def leadership_board(request, quiz):
 
     return render(request, 'quizTest/ranked_performance.html', {'user_performances': ranked_performance, 'related_quizzes': related_quizzes})    
 
-# i am done

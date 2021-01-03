@@ -35,13 +35,14 @@ h1{
     color: rgb(185, 184, 184);
 }
 .icons:hover{
-    color: #8070d0;
+    color: #1c9164;
 }
 /* ending best tutors in town */
 
 
-@media only screen and (max-width:1500px){
-    .video{
-        width: 400px;
+@media only screen and (max-width: 600px) {
+    .video {
+      background-color: lightblue;
     }
-}
+  }
+  
